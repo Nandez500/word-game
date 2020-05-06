@@ -3,9 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import  { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyDvLG3jcat-12YldkstrIEy8Va4Y2qF0do",
   authDomain: "word-game-508f9.firebaseapp.com",
@@ -23,8 +30,13 @@ const firebaseConfig = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule,
-    AngularFirestoreModule
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
