@@ -11,6 +11,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import  { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { LobbyComponent } from './lobby/lobby.component';
+import { GameComponent } from './game/game.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 
 const firebaseConfig = {
@@ -25,7 +28,10 @@ const firebaseConfig = {
 };
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LobbyComponent,
+    GameComponent,
+    MainMenuComponent
   ],
   imports: [
     BrowserModule,

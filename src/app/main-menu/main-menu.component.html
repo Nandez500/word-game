@@ -1,0 +1,17 @@
+<div>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [formControl]="name">
+      </mat-form-field>
+    
+    </form>
+    <button mat-raised-button color="primary" (click)="createGame()" routerLink="/lobby">Create Game</button>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Game ID</mat-label>
+        <input matInput placeholder="Ex. ABCD" type="text" [formControl]="codeInput">
+      </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary" (click)="joinGame()" routerLink="/lobby">Join Game</button>
+  </div>
