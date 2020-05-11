@@ -1,1 +1,6 @@
-<p>lobby works!</p>
+<p>Game Code: {{code}}</p>
+<p>Players:</p>
+<ul>
+    <li *ngFor="let player of players | async">{{player.name}}</li>
+</ul>
+<button mat-raised-button color="primary">Start Game</button>
